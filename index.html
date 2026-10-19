@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Vườn Tulip Xanh – Chúc Mừng 20/10 Bạn Ánh 🌷</title>
+  <meta name="description" content="Khu vườn diorama tulip xanh phong cách 3D nghệ thuật chúc mừng ngày Phụ nữ Việt Nam 20/10 gửi tặng bạn Ánh.">
+  <link rel="stylesheet" href="style.css">
+  <script src="three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+</head>
+<body>
+  <main class="shell">
+    <!-- 3D Canvas Viewport -->
+    <section id="viewport" aria-label="Khu vườn Tulip Xanh 3D">
+      <canvas id="world" aria-label="Kéo để xoay và cuộn để phóng to/thu nhỏ"></canvas>
+    </section>
+
+    <!-- Top Heading -->
+    <header class="heading">
+      <p class="eyebrow">20 THÁNG 10 · DÀNH TẶNG BẠN ÁNH</p>
+      <h1>Tulip</h1>
+      <p id="description">
+        Đóa tulip xanh kiêu hãnh giữa đảo ngọc tĩnh lặng, tượng trưng cho sự bình yên, niềm tin vững vàng và nét rạng ngời rất riêng của bạn Ánh.
+      </p>
+    </header>
+
+    <!-- Center Screen Glowing Button to Open Greeting Card -->
+    <div class="center-letter-wrapper">
+      <button id="openLetterBtn" class="center-letter-btn" type="button" aria-label="Mở thiệp chúc mừng 20/10">
+        <span class="btn-glow-pulse" aria-hidden="true"></span>
+        <span class="btn-text">Mở</span>
+      </button>
+    </div>
+
+    <!-- Center Bottom Touch Hint -->
+    <p class="hint"></p>
+
+    <!-- ========================================================= -->
+    <!-- 20/10 CELEBRATION LETTER MODAL FOR BẠN ÁNH               -->
+    <!-- ========================================================= -->
+    <div id="letterModal" class="letter-modal-backdrop" role="dialog" aria-modal="true">
+      <article class="letter-parchment-card">
+        <button id="closeLetterBtn" class="modal-close-btn" type="button" aria-label="Đóng thư">✕</button>
+
+        <div class="letter-inner-frame">
+          <div class="modal-wax-seal">
+            <span><img style="width: 120%; transform: translateY(5px); border-radius: 50%;" src="https://p16-common-sign.tiktokcdn.com/tos-alisg-avt-0068/327f020e514b0187f14ef05aedd13306~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=4d02e9e3&x-expires=1792605600&x-signature=GcKDMX%2BdAgkl2mHO1lPif8h9eb8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my" alt=""></span>
+          </div>
+
+          <div class="modal-date-sub">20 Tháng 10 • Ngày Phụ Nữ Việt Nam</div>
+          <h2 class="modal-title">Gửi Tặng Bạn Ánh</h2>
+
+          <div class="modal-salutation">Gửi bạn Ánh thân mến,</div>
+
+          <div class="modal-body">
+            <p>
+              Nhân ngày Phụ nữ Việt Nam 20/10, xin gửi tặng bạn cả một khu vườn tulip xanh rực rỡ nhất cùng những lời chúc chân thành, ấm áp và ngọt ngào nhất từ đáy lòng!
+            </p>
+            <p>
+              Đúng như cái tên <strong>“Ánh”</strong> – bạn luôn là ánh nắng ban mai dịu dàng nhưng đầy rạng rỡ, mang đến nguồn năng lượng tích cực, sự tươi vui và ấm áp cho mọi người xung quanh.
+            </p>
+
+            <ul class="modal-wish-list">
+              <li>Chúc bạn Ánh luôn giữ mãi nụ cười tươi tắn trên môi, mỗi ngày thức dậy đều ngập tràn sự hứng khởi và yêu đời.</li>
+              <li>Chúc Ánh luôn xinh đẹp, trẻ trung, tự tin và luôn là phiên bản tỏa sáng độc nhất vô nhị như đóa tulip xanh hiếm quý.</li>
+              <li>Mong rằng mọi kế hoạch, ước mơ và hoài bão trong công việc cũng như cuộc sống của bạn đều sẽ gặt hái thành công trọn vẹn.</li>
+              <li>Chúc bạn một ngày 20/10 thật đáng nhớ, nhận được thật nhiều hoa tươi, quà tặng và ngập tràn tình yêu thương!</li>
+            </ul>
+
+            <p>
+              Hãy luôn yêu thương bản thân, tự hào về chính mình và vững bước trên con đường phía trước nhé!🌷
+            </p>
+          </div>
+
+          <div class="modal-signoff">
+            <div class="modal-signoff-sub">Chúc bạn một ngày 20/10 thật tuyệt vời,</div>
+            <div class="modal-signoff-name">Thân mến gửi bạn Ánh🌷</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
